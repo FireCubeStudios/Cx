@@ -19,13 +19,15 @@ using namespace Windows::UI::Xaml::Data;
 using namespace Windows::UI::Xaml::Input;
 using namespace Windows::UI::Xaml::Media;
 using namespace Windows::UI::Xaml::Navigation;
-using namespace Windows::Devices::Power;
+using namespace Windows::UI::ViewManagement;
+using namespace Windows::ApplicationModel::Core;
 
 // The Blank Page item template is documented at https://go.microsoft.com/fwlink/?LinkId=402352&clcid=0x409
 
 MainPage::MainPage()
 {
 	InitializeComponent();
+	CoreApplication::GetCurrentView()->TitleBar->ExtendViewIntoTitleBar = true;
 	TimeText->Text = "C++";
 }
 
